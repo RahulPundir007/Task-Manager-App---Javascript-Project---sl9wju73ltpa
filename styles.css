@@ -1,1 +1,234 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.1ms linear;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    #1fa2ff 0%,
+    #12d8fa 51%,
+    #1fa2ff 100%
+  );
+}
+
+.main-container .input-section {
+  text-align: center;
+}
+
+.input-section {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+.input-section label {
+  font-size: 19px;
+  font-weight: 500;
+  padding-right: 3px;
+}
+
+.input-section input {
+  padding: 4px;
+  border: none;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.input-section input::placeholder {
+  color: #474747;
+}
+
+.input-section button {
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 1px;
+  color: #009ffd;
+  font-weight: bold;
+}
+
+.inner-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgb(255, 230, 210);
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  margin: 50px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  border: 1px solid black;
+}
+
+.open-section-cards {
+  overflow: auto;
+  height: 95%;
+}
+
+.inprogress-section-cards {
+  overflow: auto;
+  height: 95%;
+}
+
+.inreview-section-cards {
+  overflow: auto;
+  height: 95%;
+}
+
+.done-section-cards {
+  overflow: auto;
+  height: 95%;
+}
+
+.container h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #474747;
+}
+
+li {
+  text-decoration: none;
+}
+
+.task {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+#open-section i {
+  padding-left: 200px;
+  padding-top: 20px;
+  color: orangered;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.task-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.task-modal > .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 35px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.modal-content #task-description {
+  width: 100%;
+  height: 90px;
+  font-size: 20px;
+  background-color: #44a4ff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  resize: none;
+  padding: 10px;
+}
+
+.modal-content #task-description::placeholder {
+  font-size: large;
+  padding: 5px;
+  color: white;
+}
+
+.modal-content #modal-button {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#save-btn {
+  color: #5a5a5a;
+  float: right;
+  font-size: 15px;
+  font-weight: medium;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+#save-btn:hover,
+#save-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#close-btn:hover,
+#close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inreview-card {
+  border: solid 1px orange;
+}
+
+.open-card {
+  border: solid 1px black;
+}
+.done-card {
+  border: solid 1px green;
+}
+.inprogress-card {
+  border: solid 1px blue;
+}
+
+
+@media (max-width: 1000px) {
+  .inner-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container {
+    margin: 10px;
+    width: 300px;
+    height: 400px;
+  }
+}

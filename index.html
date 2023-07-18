@@ -1,1 +1,85 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="input-section">
+        <label for="add-task">Add Task :</label>
+        <input
+          type="text"
+          id="add-task"
+          placeholder="Add Your Task"
+          autofocus
+          autocomplete="off"
+        />
+        <button type="submit" onclick="onAddTask(event)">Submit</button>
+      </div>
+
+      <div class="inner-section">
+        <section class="container" id="open-section">
+          <h3><strong>OPEN</strong></h3>
+          <div
+            id="open-section-cards"
+            class="open-section-cards"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </section>
+        <section class="container" id="inprogress-section">
+          <h3><strong>IN-PROGRESS</strong></h3>
+          <div
+            id="inprogress-section-cards"
+            class="inprogress-section-cards"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </section>
+        <section class="container" id="inreview-section">
+          <h3><strong>IN-REVIEW</strong></h3>
+          <div
+            id="inreview-section-cards"
+            class="inreview-section-cards"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </section>
+        <section class="container" id="done-section">
+          <h3><strong>DONE</strong></h3>
+          <div
+            id="done-section-cards"
+            class="done-section-cards"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </section>
+      </div>
+      <div id="taskModal" class="task-modal">
+        <div class="modal-content">
+          <div class="box-container">
+            <span id="close-btn" class="close">&times;</span>
+            <label for="task-description">Add Description</label>
+          </div>
+          <textarea
+            id="task-description"
+            autocomplete="off"
+            autofocus
+            placeholder="Type your description here..."
+          ></textarea>
+          <button id="save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/da3ac25b49.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
